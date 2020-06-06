@@ -15,5 +15,5 @@ abstract class Person {
 }
 
 class Student extends Person {
-  override val name: String = "student"
+  override val name: String = "student3"
 }
