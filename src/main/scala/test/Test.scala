@@ -10,14 +10,28 @@ object Test {
     * @param args 参数
     */
   def main(args: Array[String]): Unit = {
-    /*val name: String = "张三"
-    val age: Int = 23
-    println(s"name = $name,age = ${age * 10}")
-    println(f"name = $name%s,age = ${age * 10}%3.3f")
-    println(s"${age}")*/
-    val age: Int = 2;
-    println(age.toString + age)
 
+    implicit def double2Int(d: Double): Int = {
+      d.toInt
+    }
+
+    val d: Int = 3.5
   }
 
+}
+
+trait A {
+  println("A")
+}
+
+trait B extends A {
+  println("B")
+}
+
+class E {
+  println("E")
+}
+
+class F extends E {
+  println("F")
 }
