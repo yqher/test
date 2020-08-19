@@ -19,13 +19,13 @@ object Test6 {
     peopleDF.show()
 
 
-    val peopleRdd1 = sc.makeRDD(List((1, "marry", 34, "male", "20180203"), (2, "marry", 34, "male", "20180203"), (3, "marry", 34, "male", "20180203"))
-      , 3)
-    val peopleDF1: DataFrame = peopleRdd1.map(sp => {
-      (sp._1, sp._2, sp._3, sp._4, sp._5)
-    }).toDF("id", "name", "age", "sex", "time")
-    peopleDF1.show()
-    peopleDF.join(peopleDF1, Seq("id"), "left").show()
+    /* val peopleRdd1 = sc.makeRDD(List((1, "marry", 34, "male", "20180203"), (2, "marry", 34, "male", "20180203"), (3, "marry", 34, "male", "20180203"))
+       , 3)
+     val peopleDF1: DataFrame = peopleRdd1.map(sp => {
+       (sp._1, sp._2, sp._3, sp._4, sp._5)
+     }).toDF("id", "name", "age", "sex", "time")
+     peopleDF1.show()
+     peopleDF.join(peopleDF1, Seq("id"), "left").show()*/
     /*val a = sc.makeRDD(List((1),(2))).toDF("id")
     a.show()*/
     //    peopleDF1.show()
